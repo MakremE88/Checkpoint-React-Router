@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import MovieList from './MovieList/MovieList';
-
+import MovieDetails from './MovieDetails/MovieDetails';
 import classes from './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { HashRouter as Switch, Route } from 'react-router-dom';
 class App extends Component {
   render() {
     return (
       <div className={classes.App}>
-        <MovieList />
+        <Switch>
+          <Route path="/" exact component={MovieList} />
+          <Route path="/movie/:id" component={MovieDetails} />
+        </Switch>
+
       </div>
     );
   }

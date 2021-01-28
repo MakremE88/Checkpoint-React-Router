@@ -59,8 +59,8 @@ function MovieList () {
     let newMovie = movie.filter ( (el) => el.title.toUpperCase().search(searchValue.toUpperCase()) !== -1 && el.rate >= rate) 
        setMovie(newMovie)
         }
-    let movieList = movie.map((movie, i) => {
-        return <Movie movieList = {movie} key= {i}/>
+    let movieList = movie.map((movie, id) => {
+        return <Movie movieList = {movie} key= {id}/>
     })
     
     const handleOk = (term) => {

@@ -1,8 +1,11 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 import StarRatingComponent from 'react-star-rating-component';
+import { HashRouter as Router, Link } from 'react-router-dom';
+
 const Movie = (props) => {
-     return (<Col xs={12} sm= {6} md={4} className="card-movie">
+     return (
+     <Col xs={12} sm= {6} md={4} className="card-movie">
          <img src={props.movieList.imageUrl} alt={props.movieList.title} className="imgMovie" />
          <div className="white-card">
          <p className="tile-card">{props.movieList.title}</p>
@@ -18,6 +21,12 @@ const Movie = (props) => {
                 editing={false} 
         />
        </p>
+       <Router>
+            <Link to={`/movie/${props.movieList.id}`} className="btn btn-primary btn-movie">
+                Movie Details
+                <i class="fas fa-chevron-right"></i>
+            </Link>
+        </Router>
          </div>
      </Col>  );
 }

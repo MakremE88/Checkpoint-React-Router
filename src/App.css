@@ -72,3 +72,23 @@ p {
   margin: 0 0 15px;
   color: #007bff;
 }
+.btn-movie {
+  margin-top: 0;
+  display: table !important;
+}
+.d-flex.flex-details {
+  margin-top: 30px;
+}
+.flex-details {
+  margin-top: 30px;
+}
+
+.boxcard-img {
+  padding: 0 !important;
+}
+.details-movie {
+  padding: 30px !important;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
